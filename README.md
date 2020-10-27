@@ -1,4 +1,4 @@
-# 📊 Project: Complex API 2
+# 📊 Project: Artist Info
 
 1. The requirements were to make request to 2 separate APIs and combine the results on a webpage.
 
