@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url("../images/music.png");
   background-color: lightblue; /* Used if the image is unavailable */
   width: 100%; /* You must set a specified height */
   height:800px;

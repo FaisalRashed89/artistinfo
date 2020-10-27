@@ -10,4 +10,4 @@
 
 5. I would improve the UX/UI design by using CSS to change the layout of the page, the colors, fonts, and spacing. I would also work on beautifying the input and the button contained in the form where the user enters and submits the artist's name to the Javascript code. In the Javascript code I would add a conditional to clear the GIF if one is not found for the artist.
 
-6. This project is purely client side HTML, CSS, and Javascript and therefore it does not require a web server. You may download the files from Github in the form of a zip file and open the index.html file in your browser. Alternatively, one could set up a web server and configure it to serve these files via the HTTP protocol.
+6. This project is purely client side HTML, CSS, and Javascript and therefore it does not require a web server. You may download the files from Github in the form of a zip file and open the index.html file in your browser. Alternatively, one could set up a web server and configure it to serve these files via the HTTP protocol. Or simply click on this URL hosted at GitHub pages: https://faisalrashed89.github.io/artistinfo/
