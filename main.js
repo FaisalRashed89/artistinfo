@@ -20,7 +20,7 @@ function displayArtistInfo(e) {
   let artistName = artistInput.value;
 
 // this fetch gets and displays the artist album covers
-  fetch(`http://ws.audioscrobbler.com/2.0/?method=album.search&album=${artistName}&api_key=${scrobblerApiKey}&format=json`)
+  fetch(`https://ws.audioscrobbler.com/2.0/?method=album.search&album=${artistName}&api_key=${scrobblerApiKey}&format=json`)
   .then(res => res.json()) //convert result to json
   .then(response => { //process the json
     console.log(response)
@@ -32,7 +32,7 @@ function displayArtistInfo(e) {
   });
 
 //this fetch gets and displays the artist bio
-  fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artistName}&api_key=${scrobblerApiKey}&format=json`)
+  fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artistName}&api_key=${scrobblerApiKey}&format=json`)
   .then(res => res.json())
   .then(response => {
     document.querySelector('#artistBio').textContent = response.artist.bio.content
