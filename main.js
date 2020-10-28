@@ -19,11 +19,14 @@ function displayArtistInfo(e) {
 // Get the value from the input and store it in the artistName variable
   let artistName = artistInput.value;
 
+// Trim extra space when typing an artist name
+artistName = artistName.trim()
+
 // this fetch gets and displays the artist album covers
   fetch(`https://ws.audioscrobbler.com/2.0/?method=album.search&album=${artistName}&api_key=${scrobblerApiKey}&format=json`)
   .then(res => res.json()) //convert result to json
   .then(response => { //process the json
-    console.log(response)
+    console.log("album",response);
     document.querySelector('h2').innerHTML = response.results.albummatches.album[0].artist
     document.querySelector('#albumCoverOne').src = response.results.albummatches.album[0].image[3]["#text"]
     document.querySelector('#albumCoverTwo').src = response.results.albummatches.album[1].image[3]["#text"]
@@ -35,6 +38,7 @@ function displayArtistInfo(e) {
   fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artistName}&api_key=${scrobblerApiKey}&format=json`)
   .then(res => res.json())
   .then(response => {
+    console.log("bio",response);
     document.querySelector('#artistBio').textContent = response.artist.bio.content
   });
 
@@ -42,7 +46,8 @@ function displayArtistInfo(e) {
   fetch(`https://api.giphy.com/v1/gifs/search?q=${artistName}&api_key=${giphyApiKey}&limit=5`)
   .then(res => res.json())
   .then(json => {
-    console.log("image", json.data[0].images.original.url);
+    console.log("gif", json);
+    console.log("image",json.data[0].images.original.url);
     document.querySelector('#artistImage').src= json.data[0].images.original.url
   });
 }
