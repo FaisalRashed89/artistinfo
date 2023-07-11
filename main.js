@@ -27,11 +27,17 @@ artistName = artistName.trim()
   .then(res => res.json()) //convert result to json
   .then(response => { //process the json
     console.log("album",response);
+// Show album container//
+    const albumContainer = document.getElementsByClassName("albumContainer")[0];
+    albumContainer.style.display = "flex";
     document.querySelector('h2').innerHTML = response.results.albummatches.album[0].artist
     document.querySelector('#albumCoverOne').src = response.results.albummatches.album[0].image[3]["#text"]
+    document.querySelector('#albumLinkOne').href = response.results.albummatches.album[0].url
     document.querySelector('#albumCoverTwo').src = response.results.albummatches.album[1].image[3]["#text"]
+    document.querySelector('#albumLinkTwo').href = response.results.albummatches.album[1].url
     document.querySelector('#albumCoverThree').src = response.results.albummatches.album[2].image[3]["#text"]
-    document.querySelector('#albumCoverFour').src = response.results.albummatches.album[3].image[3]["#text"]
+    document.querySelector('#albumLinkThree').href = response.results.albummatches.album[2].url
+
   });
 
 //this fetch gets and displays the artist bio

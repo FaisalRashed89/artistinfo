@@ -2,30 +2,48 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
   <title></title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:500&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
-    <p class="container"></p>
+    <h1 class="title">Stay Tuned</h1>
   </header>
-  <h1>Stay Tuned</h1>
-  <h2>Artist Name</h2>
+  <p class="description">Type the full name of your favorite artist into the input text below to find more about their album(s)</p>
   <form class="" action="index.html" method="post">
-    <input type="text" name="" value="" placeholder="Insert Artist Name">
-    <button type="submit" name="button">Click Enter</button>
+    <input type="text" name="" value="" placeholder="Artist Full Name">
+    <button class="submitButton" type="submit" name="button">Submit</button>
   </form>
+  <!-- This is where the selected artis name is going to display -->
+  <h2>Artist Name</h2>
+  <!-- This is where the selected artis album is going to display -->
+  <div class="albumContainer">
+    <div class="album">
+      <a id="albumLinkOne" href="#"><img id="albumCoverOne"></a>
+      <button class="shareButton">Share</button>
+    </div>
+    <div class="album">
+      <a id="albumLinkTwo" href="#"><img id="albumCoverTwo"></a>
+      <button class="shareButton">Share</button>
+    </div>
+    <div class="album">
+      <a id="albumLinkThree" href="#"><img id="albumCoverThree"></a>
+      <button class="shareButton">Share</button>
+    </div>
+  </div>
 
-  <img id="albumCoverOne">
-  <img id="albumCoverTwo">
-  <img id="albumCoverThree">
-  <img id="albumCoverFour">
-  <img id="albumCoverFive">
+  <h2>Artist Bio</h2>
 
-  <p id="artistBio"></p>
+  <div>
+    <p class="artistBio" id="artistBio"></p>
+  </div>
+  <!-- This is where the selected artis giphy is going to dislpay -->
+  <h2>Giphy</h2>
+  <p class="gifDescription">Here are some popular Giphs of your favorite artist for you to enjoy!!</p>
   <img id="artistImage" src="" alt="">
   <script type="text/javascript" src="main.js"></script>
-  
 </body>
 </html>

@@ -1,28 +1,96 @@
 * {
   box-sizing: border-box;
+
 }
+
 body {
-  background-color: lightblue; /* Used if the image is unavailable */
-  width: 100%; /* You must set a specified height */
-  height:800px;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  font-family: 'Roboto Mono', monospace;
-  text-align: center;
+  background-color: lightblue;
+  font-family: 'Alegreya', serif;
 }
-input,button{
-  border: 3px solid yellow;
-  border-radius: 12px;
-  height: 38px;
-  width: 30%;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 20px;
-  margin-bottom: 12px;
+
+.description {
+  padding: 4px 8px;
 }
-p  {
-  background-color: yellow;
+
+.albumContainer {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shareButton {
+  border-radius: 16px;
+  color: white;
+  background-color: blue;
+  border: blue;
+  padding: 8px 16px;
+  width: 100px;
+}
+
+.submitButton {
+  border-radius: 16px;
+  height: 36px;
+  padding: 8px 32px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  background-color: blue;
+  color: white;
+  margin-bottom: 24px;
+  border: blue;
+}
+
+.artistBio {
+  padding: 4px 8px;
+  margin: 60px;
+}
+
+.artistBio:empty {
+    display:none;
+}
+
+.gifDescription {
+  padding: 4px 8px;
+}
+
+h1, h2 {
+  color: darkblue;
+}
+
+input {
+  outline: none;
+  border-radius: 4px;
+  height: 36px;
+  color: lightgrey;
+  border-color: transparent;
+  width: 25%;
+  font-family: 'Roboto Mono', monospace;
+  padding-left: 32px;
+  background: white;
+}
+
+p {
+  color: darkblue;
+  background-color: white;
   opacity: 0.8;
-  font-weight: bold;
-  border: 1px solid green;
+  font-size: 19px;
+}
+
+#albumCoverOne, #albumCoverTwo, #albumCoverThree, #albumCoverFour {
+  margin: 50px auto;
+  width: 300px;
+  border-radius: 30px;
+  position: relative;
+}
+
+
+img#artistImage {
+  max-width: 39%;
+  border-radius: 20px;
 }
